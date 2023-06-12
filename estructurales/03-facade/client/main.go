@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"log"
 
-	"github.com/alexyslozada/patrones-de-diseno-con-go/estructurales/03-facade/facade"
+	"github.com/Corrientes-Telecomunicaciones/patrones-de-diseno-con-go/estructurales/03-facade/facade"
 )
 
 func main() {

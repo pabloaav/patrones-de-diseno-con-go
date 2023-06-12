@@ -1,6 +1,6 @@
 package factory
 
-import "github.com/alexyslozada/patrones-de-diseno-con-go/creacionales/02-factory/connection"
+import "github.com/Corrientes-Telecomunicaciones/patrones-de-diseno-con-go/creacionales/02-factory/connection"
 
 func Factory(t int) connection.DBConnection {
 	switch t {

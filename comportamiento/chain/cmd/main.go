@@ -2,8 +2,9 @@ package main
 
 import (
 	"fmt"
-	"github.com/alexyslozada/patrones-de-diseno-con-go/comportamiento/chain"
 	"log"
+
+	"github.com/Corrientes-Telecomunicaciones/patrones-de-diseno-con-go/comportamiento/chain"
 )
 
 func main() {

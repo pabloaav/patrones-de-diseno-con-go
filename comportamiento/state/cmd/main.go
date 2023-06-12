@@ -1,8 +1,9 @@
 package main
 
 import (
-	"github.com/alexyslozada/patrones-de-diseno-con-go/comportamiento/state"
 	"time"
+
+	"github.com/Corrientes-Telecomunicaciones/patrones-de-diseno-con-go/comportamiento/state"
 )
 
 func main() {

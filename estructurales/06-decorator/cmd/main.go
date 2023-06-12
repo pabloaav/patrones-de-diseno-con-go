@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"os"
 
-	decorator "github.com/alexyslozada/patrones-de-diseno-con-go/estructurales/06-decorator"
+	decorator "github.com/Corrientes-Telecomunicaciones/patrones-de-diseno-con-go/estructurales/06-decorator"
 )
 
 func main() {

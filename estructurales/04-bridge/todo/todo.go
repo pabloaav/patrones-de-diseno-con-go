@@ -1,6 +1,6 @@
 package todo
 
-import "github.com/alexyslozada/patrones-de-diseno-con-go/estructurales/04-bridge/list"
+import "github.com/Corrientes-Telecomunicaciones/patrones-de-diseno-con-go/estructurales/04-bridge/list"
 
 // ToDo interface que tiene la lista de tareas
 type ToDo interface {

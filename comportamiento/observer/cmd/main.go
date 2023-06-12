@@ -7,10 +7,10 @@ import (
 	"os"
 	"strings"
 
-	"github.com/alexyslozada/patrones-de-diseno-con-go/comportamiento/observer/email"
-	"github.com/alexyslozada/patrones-de-diseno-con-go/comportamiento/observer/message"
-	"github.com/alexyslozada/patrones-de-diseno-con-go/comportamiento/observer/observer"
-	"github.com/alexyslozada/patrones-de-diseno-con-go/comportamiento/observer/slack"
+	"github.com/Corrientes-Telecomunicaciones/patrones-de-diseno-con-go/comportamiento/observer/email"
+	"github.com/Corrientes-Telecomunicaciones/patrones-de-diseno-con-go/comportamiento/observer/message"
+	"github.com/Corrientes-Telecomunicaciones/patrones-de-diseno-con-go/comportamiento/observer/observer"
+	"github.com/Corrientes-Telecomunicaciones/patrones-de-diseno-con-go/comportamiento/observer/slack"
 )
 
 func main() {

@@ -1,8 +1,8 @@
 package local
 
 import (
-	"github.com/alexyslozada/pruebas/proxy/book"
-	"github.com/alexyslozada/pruebas/proxy/remote"
+	"github.com/Corrientes-Telecomunicaciones/patrones-de-diseno-con-go/estructurales/01-proxy/book"
+	"github.com/Corrientes-Telecomunicaciones/patrones-de-diseno-con-go/estructurales/01-proxy/remote"
 )
 
 type Local struct {

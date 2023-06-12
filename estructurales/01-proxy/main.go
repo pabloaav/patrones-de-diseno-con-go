@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/alexyslozada/pruebas/proxy/local"
+	"github.com/Corrientes-Telecomunicaciones/patrones-de-diseno-con-go/estructurales/01-proxy/local"
 )
 
 var loc local.Proxy

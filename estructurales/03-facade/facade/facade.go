@@ -1,9 +1,9 @@
 package facade
 
 import (
-	"github.com/alexyslozada/patrones-de-diseno-con-go/estructurales/03-facade/email"
-	"github.com/alexyslozada/patrones-de-diseno-con-go/estructurales/03-facade/storage"
-	"github.com/alexyslozada/patrones-de-diseno-con-go/estructurales/03-facade/validate"
+	"github.com/Corrientes-Telecomunicaciones/patrones-de-diseno-con-go/estructurales/03-facade/email"
+	"github.com/Corrientes-Telecomunicaciones/patrones-de-diseno-con-go/estructurales/03-facade/storage"
+	"github.com/Corrientes-Telecomunicaciones/patrones-de-diseno-con-go/estructurales/03-facade/validate"
 )
 
 type Facade struct {

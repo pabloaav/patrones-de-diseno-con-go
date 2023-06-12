@@ -1,8 +1,8 @@
 package main
 
 import (
-	"github.com/alexyslozada/patrones-de-diseno-con-go/estructurales/04-bridge/list"
-	"github.com/alexyslozada/patrones-de-diseno-con-go/estructurales/04-bridge/todo"
+	"github.com/Corrientes-Telecomunicaciones/patrones-de-diseno-con-go/estructurales/04-bridge/list"
+	"github.com/Corrientes-Telecomunicaciones/patrones-de-diseno-con-go/estructurales/04-bridge/todo"
 )
 
 func main() {

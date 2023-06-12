@@ -3,7 +3,7 @@ package remote
 import (
 	"time"
 
-	"github.com/alexyslozada/pruebas/proxy/book"
+	"github.com/Corrientes-Telecomunicaciones/patrones-de-diseno-con-go/estructurales/01-proxy/book"
 )
 
 // Data simula la base de datos

@@ -2,10 +2,11 @@ package main
 
 import (
 	"fmt"
-	"github.com/alexyslozada/patrones-de-diseno-con-go/creacionales/01-singleton/client-one"
-	"github.com/alexyslozada/patrones-de-diseno-con-go/creacionales/01-singleton/client-two"
-	"github.com/alexyslozada/patrones-de-diseno-con-go/creacionales/01-singleton/singleton"
 	"sync"
+
+	client_one "github.com/Corrientes-Telecomunicaciones/patrones-de-diseno-con-go/creacionales/01-singleton/client-one"
+	client_two "github.com/Corrientes-Telecomunicaciones/patrones-de-diseno-con-go/creacionales/01-singleton/client-two"
+	"github.com/Corrientes-Telecomunicaciones/patrones-de-diseno-con-go/creacionales/01-singleton/singleton"
 )
 
 func main() {

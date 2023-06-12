@@ -1,6 +1,6 @@
 package todo
 
-import "github.com/alexyslozada/patrones-de-diseno-con-go/estructurales/04-bridge/list"
+import "github.com/Corrientes-Telecomunicaciones/patrones-de-diseno-con-go/estructurales/04-bridge/list"
 
 // Any recibe tareas repetidas
 type Any struct {

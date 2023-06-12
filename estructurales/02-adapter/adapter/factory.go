@@ -1,8 +1,8 @@
 package adapter
 
 import (
-	"github.com/alexyslozada/patrones-de-diseno-con-go/estructurales/02-adapter/auto"
-	"github.com/alexyslozada/patrones-de-diseno-con-go/estructurales/02-adapter/bici"
+	"github.com/Corrientes-Telecomunicaciones/patrones-de-diseno-con-go/estructurales/02-adapter/auto"
+	"github.com/Corrientes-Telecomunicaciones/patrones-de-diseno-con-go/estructurales/02-adapter/bici"
 )
 
 func Factory(s string) Adapter {

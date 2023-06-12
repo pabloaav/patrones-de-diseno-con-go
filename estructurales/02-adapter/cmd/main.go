@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"log"
 
-	"github.com/alexyslozada/patrones-de-diseno-con-go/estructurales/02-adapter/adapter"
+	"github.com/Corrientes-Telecomunicaciones/patrones-de-diseno-con-go/estructurales/02-adapter/adapter"
 )
 
 func main() {

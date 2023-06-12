@@ -1,6 +1,6 @@
 package message
 
-import "github.com/alexyslozada/patrones-de-diseno-con-go/comportamiento/observer/observer"
+import "github.com/Corrientes-Telecomunicaciones/patrones-de-diseno-con-go/comportamiento/observer/observer"
 
 // Message .
 type Message struct {

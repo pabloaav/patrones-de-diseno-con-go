@@ -1,8 +1,9 @@
 package builder_test
 
 import (
-	builder "github.com/alexyslozada/patrones-de-diseno-con-go/creacionales/03-builder"
 	"testing"
+
+	builder "github.com/Corrientes-Telecomunicaciones/patrones-de-diseno-con-go/creacionales/03-builder"
 )
 
 func TestSender_BuildMessage(t *testing.T) {
