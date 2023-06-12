@@ -9,6 +9,7 @@ Devuelve el Producto Representado, es decir, un producto concreto que adopta la 
 en este ejemplo.
 La funcion Build() no tiene parametros. Es la encargada de tomar los atributos de un producto concreto y adaptarlos,
 a la struct de un Producto Representado.
+Cada struct del producto concreto usa composicion con la strcuct del producto modelo u objeto bajo construcción.
 */
 
 // JSONMessageBuilder is concrete builder
