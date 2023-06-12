@@ -1,11 +1,11 @@
 package builder
 
-// Sender = Director
+// Director: Construye el objeto utilizando la interface.
 type Sender struct {
-	builder MessageBuilder
+	builder MessageBuilder // builder es el nombre del atributo del sender, que es de tipo MessageBuilder interface
 }
 
-// SetBuilder asigna el constructor
+// constructor
 func (s *Sender) SetBuilder(b MessageBuilder) {
 	s.builder = b
 }
