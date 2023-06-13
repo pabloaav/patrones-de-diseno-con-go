@@ -21,16 +21,17 @@ func TestSender_BuildMessage(t *testing.T) {
 
 	// Paso 1: metodo constructor del Director.
 	// Recibe un producto concreto que satisface la IBuilder, que es el contrato o interfaz
-	director.SetBuilder(json)
-	jsonMsg, err := director.BuildMessage("Gopher", "Hola mundo!")
+	// El cliente sólo necesita asociar un objeto constructor con una clase directora
+	director.SetBuilder(json)                                      // asociar concrete product json con director
+	jsonMsg, err := director.BuildMessage("Gopher", "Hola mundo!") // director.make()
 	if err != nil {
 		t.Fatalf("BuildMesage(): JSON: no se esperaba error, se recibió: %v", err)
 	}
 
 	t.Log(string(jsonMsg.Body))
 
-	director.SetBuilder(xmlf)
-	xmlMsg, err := director.BuildMessage("XMLGopher", "Hola mundo")
+	director.SetBuilder(xmlf)                                       // asociar concrete product xml con director
+	xmlMsg, err := director.BuildMessage("XMLGopher", "Hola mundo") // director.make()
 	if err != nil {
 		t.Fatalf("BuildMesage(): XML: no se esperaba error, se recibió: %v", err)
 	}
