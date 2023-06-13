@@ -12,6 +12,13 @@ func (s *Director) SetBuilder(b IBuilder) {
 	s.builder = b
 }
 
+// constructor. Esta forma tambien es valida.
+// es setear en el constructor los atributos del producto concreto
+func (s *Director) SetBuilder2(b IBuilder, recipient, message string) {
+	s.builder = b
+	s.builder.SetRecipient(recipient).SetMessage(message) // rutina de construccion
+}
+
 // BuildMessage es el metodo que contruye un producto representado
 // Ya que el Director esta compuesto por un producto concreto, este metodo setea los atributos del producto modelo.
 // Devuelve un producto representado, segun sea el producto concreto que recibio en su constructor
@@ -21,5 +28,10 @@ func (s *Director) BuildMessage(recipient, message string) (*ProductRepresented,
 	// puesto que implementa una interface IBuilder
 	s.builder.SetRecipient(recipient).SetMessage(message) // rutina de construccion
 	// sea cual fuere el Producto Concreto, el metodo Build() hara una logica particular que adaptara los atributos recibidos, para crear un Producto Representado acorde al tipo de producto concreto actual
+	return s.builder.Build()
+}
+
+// metodo que corresponde al segundo constructor
+func (s *Director) BuildProductRepresented() (*ProductRepresented, error) {
 	return s.builder.Build()
 }
