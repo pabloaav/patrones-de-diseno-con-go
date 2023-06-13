@@ -14,27 +14,28 @@ Cada struct del producto concreto usa composicion con la strcuct del producto mo
 
 // JSONMessageBuilder is concrete builder
 type JSONMessageBuilder struct {
-	message Message
+	message Product
 }
 
 // SetRecipient asigna el destinatario del mensaje
-func (b *JSONMessageBuilder) SetRecipient(recipient string) MessageBuilder {
+func (b *JSONMessageBuilder) SetRecipient(recipient string) IBuilder {
 	b.message.Recipient = recipient
 	return b
 }
 
 // SetMessage asigna el mensaje a enviar
-func (b *JSONMessageBuilder) SetMessage(text string) MessageBuilder {
+func (b *JSONMessageBuilder) SetMessage(text string) IBuilder {
 	b.message.Text = text
 	return b
 }
 
 // Build construye el objeto y lo representa en JSON
-func (b *JSONMessageBuilder) Build() (*MessageRepresented, error) {
+// Cada Producto Concreto construye su propia representacion al modo que mejor le convenga
+func (b *JSONMessageBuilder) Build() (*ProductRepresented, error) {
 	data, err := json.Marshal(b.message)
 	if err != nil {
 		return nil, err
 	}
 
-	return &MessageRepresented{Body: data, Format: "JSON"}, nil
+	return &ProductRepresented{Body: data, Format: "JSON"}, nil
 }

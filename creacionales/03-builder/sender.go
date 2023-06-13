@@ -1,19 +1,24 @@
 package builder
 
 // Director: Construye el objeto utilizando la interface.
-type Sender struct {
-	builder MessageBuilder // builder es el nombre del atributo del sender, que es de tipo MessageBuilder interface
+// el DIrector recibe cualquien producto concreto que cumpla con la interface IBuilder
+type Director struct {
+	builder IBuilder // builder es el nombre del atributo del director, que es de tipo IBuilder interface
 }
 
 // constructor. Podria llamarse NewBuilder
-func (s *Sender) SetBuilder(b MessageBuilder) {
+func (s *Director) SetBuilder(b IBuilder) {
 	s.builder = b
 }
 
 // BuildMessage es el metodo que contruye un producto representado
 // Ya que el Director esta compuesto por un producto concreto, este metodo setea los atributos del producto modelo.
 // Devuelve un producto representado, segun sea el producto concreto que recibio en su constructor
-func (s *Sender) BuildMessage(recipient, message string) (*MessageRepresented, error) {
+// En terminos del ejemplo, el cuerpo de este metodo depende de la logica de construccion del metodo Build() de cada constructor concreto
+func (s *Director) BuildMessage(recipient, message string) (*ProductRepresented, error) {
+	// sea cual fuere el Producto Concreto, sabemos que podemos decirle que setee sus atributos
+	// puesto que implementa una interface IBuilder
 	s.builder.SetRecipient(recipient).SetMessage(message)
+	// sea cual fuere el Producto Concreto, el metodo Build() hara una logica particular que adaptara los atributos recibidos, para crear un Producto Representado acorde al tipo de producto concreto actual
 	return s.builder.Build()
 }

@@ -14,27 +14,28 @@ Cada struct del producto concreto usa composicion con la strcuct del producto mo
 
 // XMLMessageBuilder is concrete builder
 type XMLMessageBuilder struct {
-	message Message
+	message Product
 }
 
 // SetRecipient asigna el receptor del mensaje
-func (b *XMLMessageBuilder) SetRecipient(recipient string) MessageBuilder {
+func (b *XMLMessageBuilder) SetRecipient(recipient string) IBuilder {
 	b.message.Recipient = recipient
 	return b
 }
 
 // SetMessage asigna el mensaje a enviar
-func (b *XMLMessageBuilder) SetMessage(text string) MessageBuilder {
+func (b *XMLMessageBuilder) SetMessage(text string) IBuilder {
 	b.message.Text = text
 	return b
 }
 
 // Build construye el objeto y lo representa en XML
-func (b *XMLMessageBuilder) Build() (*MessageRepresented, error) {
+// Cada Producto Concreto construye su propia representacion al modo que mejor le convenga
+func (b *XMLMessageBuilder) Build() (*ProductRepresented, error) {
 	data, err := xml.Marshal(b.message)
 	if err != nil {
 		return nil, err
 	}
 
-	return &MessageRepresented{Body: data, Format: "XML"}, nil
+	return &ProductRepresented{Body: data, Format: "XML"}, nil
 }
