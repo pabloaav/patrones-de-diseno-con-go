@@ -1,7 +1,8 @@
-package auto
+package movilidad
 
 import "fmt"
 
+/* Automovil tiene dos metodos propios por su caracteristica */
 type Automovil struct {
 	Marca     string
 	Model     uint8

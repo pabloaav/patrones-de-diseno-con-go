@@ -1,18 +1,17 @@
 package adapter
 
-import (
-	"github.com/Corrientes-Telecomunicaciones/patrones-de-diseno-con-go/estructurales/02-adapter/auto"
-	"github.com/Corrientes-Telecomunicaciones/patrones-de-diseno-con-go/estructurales/02-adapter/bici"
-)
+import "github.com/Corrientes-Telecomunicaciones/patrones-de-diseno-con-go/estructurales/02-adapter/movilidad"
 
 type Adapter interface {
 	Mover()
 }
 
+// todos los adaptadores implementan la inteface Adapter
 type AutomovilAdapter struct {
-	Auto *auto.Automovil
+	Auto *movilidad.Automovil
 }
 
+// Para mover el auto hay que encenderlo y acelerar
 func (a *AutomovilAdapter) Mover() {
 	if !a.Auto.Encendido {
 		a.Auto.Encender()
@@ -22,9 +21,11 @@ func (a *AutomovilAdapter) Mover() {
 }
 
 type BicicletaAdapter struct {
-	Bici *bici.Bicicleta
+	Bici *movilidad.Bicicleta
 }
 
+// Para mover la bicicleta hay que encenderlo y acelerar
 func (b *BicicletaAdapter) Mover() {
+	b.Bici.Montar()
 	b.Bici.Avanzar()
 }

@@ -1,19 +1,20 @@
 package adapter
 
 import (
-	"github.com/Corrientes-Telecomunicaciones/patrones-de-diseno-con-go/estructurales/02-adapter/auto"
-	"github.com/Corrientes-Telecomunicaciones/patrones-de-diseno-con-go/estructurales/02-adapter/bici"
+	"fmt"
+
+	"github.com/Corrientes-Telecomunicaciones/patrones-de-diseno-con-go/estructurales/02-adapter/movilidad"
 )
 
-func Factory(s string) Adapter {
+func MovilidadFactory(s string) (Adapter, error) {
 	switch s {
 	case "automovil":
-		d := auto.Automovil{}
-		return &AutomovilAdapter{&d}
+		medio := movilidad.Automovil{}
+		return &AutomovilAdapter{&medio}, nil
 	case "bicicleta":
-		d := bici.Bicicleta{}
-		return &BicicletaAdapter{&d}
+		medio := movilidad.Bicicleta{}
+		return &BicicletaAdapter{&medio}, nil
+	default:
+		return nil, fmt.Errorf("%s", "error: lo ingresado no corresponde con ningun medio de movilidad")
 	}
-
-	return nil
 }
